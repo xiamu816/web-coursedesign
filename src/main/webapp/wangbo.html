@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片居中与下方超链接示例</title>
+    <style>
+        /* 重置浏览器默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .image {
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
+        }
+
+        .link-under-image {
+            margin-top: 20px; /* 图片与链接之间的间距，可调整 */
+            text-decoration: none;
+            color: #007bff;
+            font-size: 50px;
+        }
+
+        .link-under-image:hover {
+            color: #0056b3;
+        }
+        .text{
+            font-size: 40px;
+
+        }
+        p {
+            text-indent: 2em; /* 1em等于当前字体大小，所以2em大约等于两个空格 */
+        }
+    </style>
+</head>
+<body>
+<a href="index.html" class="text">首页</a>
+<div class="centered-content">
+    <img src="https://www.jlnu.edu.cn/__local/1/C4/F9/5FECD4CD48DDD379FC45BD1CEA0_8BF8A689_83C9C.jpg?e=.jpg" alt="示例图片" class="image">
+    <h2>王波</h2>
+    <p>王波，讲师，硕士。主要研究方向：计算数学，软件开发。发表学术论文3篇。
+    </p>
+</div>
+
+</body>
+</html>
+

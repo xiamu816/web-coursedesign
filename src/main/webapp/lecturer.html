@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片居中与下方超链接示例</title>
+    <style>
+        /* 重置浏览器默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+        }
+
+        .image {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .link-under-image {
+            margin-top: 20px; /* 图片与链接之间的间距，可调整 */
+            text-decoration: none;
+            color: #007bff;
+            font-size: 50px;
+        }
+
+        .link-under-image:hover {
+            color: #0056b3;
+        }
+        .text{
+            font-size: 40px;
+
+        }
+    </style>
+</head>
+<body>
+<a href="index.html" class="text">首页</a>
+<div class="centered-content">
+    <img src="https://rsc.nefu.edu.cn/__local/D/F6/F8/2403EF8AEAD218ED25C45340631_DFDE1BA4_1C293B.jpg" alt="示例图片" class="image">
+    <a href="bianjilong.html" class="link-under-image" >边继龙</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻管理</title>
+    <style>
+        body {
+            font-family: Arial, "微软雅黑", sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+        }
+
+        a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 3rem auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<a href="index.html">首页</a>
+<a href="addNews">添加新闻</a>
+
+<table>
+    <tr>
+        <th>新闻标题</th>
+        <th>新闻内容</th>
+        <th>发布时间</th>
+    </tr>
+    <!-- 这里可以动态添加新闻数据行 -->
+</table>
+
+
+
+
+<script>
+    function renderNews(news) {
+        let table = document.getElementsByTagName("table")[0];
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        td1.innerHTML = news.title;
+        td2.innerHTML = news.content;
+        td3.innerHTML = news.dateTime;
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        table.appendChild(tr);
+    }
+
+
+</script>
+
+
+</body>
+</html>
