@@ -23,6 +23,10 @@ public class User {
         this.insertTime = insertTime;
     }
 
+    public User(String name) {
+
+    }
+
     public String getId() {
         return id;
     }

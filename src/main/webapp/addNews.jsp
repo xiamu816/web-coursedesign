@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <c:url var="b" value="/"/>
+    <base href="${b}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新增新闻表单</title>
@@ -70,7 +72,7 @@
     </style>
 </head>
 <body>
-
+<a href="index">返回首页</a>
 <form action="addNews" method="post">
     <label for="title">新闻标题:</label>
     <input type="text" id="title" name="title">
@@ -80,7 +82,7 @@
 
     <button type="submit">提交</button>
     <button type="reset">重置</button>
-    <a href="index.html">返回首页</a>
+
 </form>
 
 </body>

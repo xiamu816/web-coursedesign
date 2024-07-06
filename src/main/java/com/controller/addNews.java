@@ -8,11 +8,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/addNews")
+@WebServlet("/filter/addNews")
 public class addNews extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("addNews.jsp").forward(request, response);
+        request.getRequestDispatcher("/addNews.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -20,7 +20,7 @@ public class addNews extends HttpServlet {
         String date = request.getParameter("date");
         News news = new News(title, date);
         request.getSession().setAttribute("news", news);
-        response.sendRedirect("addNews.jsp");
+        response.sendRedirect(request.getContextPath() + "/filter/addNews");
 
 
 

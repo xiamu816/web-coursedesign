@@ -18,11 +18,15 @@ public class adminLogin  extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-        if(username.equals("admin") && password.equals("admin")) {
-            resp.sendRedirect(req.getContextPath()+"/adminWelcome.html");
+        String url;
+        if("admin".equals(username) && "admin".equals(password)) {
+            User u = new User("啊");
+            req.getSession().setAttribute("user", u);
+            url = "/filter/adminWelcome";
         } else {
-            resp.sendRedirect(req.getContextPath()+"/adminLogin.html");
+            url = "/filter/adminLogin";
         }
+        resp.sendRedirect(req.getContextPath() + url);
 
     }
 }
